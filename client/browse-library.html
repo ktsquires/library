@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>
+            Browse Library
+        </title>
+
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/css/browse-library.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <!-- <div>This is the placeholder for the return list</div><br> -->
+        <header class="header">
+            <section class="relative text-left">
+              <div class="container">
+                <div class="text-left">
+                  <h1 class='title'><span class='text-bold'>Library Book Repository</span></h1>
+                </div>
+              </div>
+            </section>
+        </header>
+
+        <div id="router_button" class="btn-group-variant config-buttons">
+            <a href="http://localhost:3000/write-library" id="browse-router" class="btn btn-sm edit_btn">Add Record</a>
+        </div>
+
+        <!-- create a table for the library data to be displayed -->
+        <main class="page-content">
+            <div class="col-xs-11">
+                <table class="table-striped table">
+                    <colgroup>
+                        <col class='col-xs-3'>
+                    </colgroup>
+                    <thead>
+                        <tr class='bg-light'>
+                            <th class="text-left">ID</th>
+                            <th class="text-left">Title</th>
+                            <th class="text-left">Author</th>
+                            <th class="text-left">Publisher</th>
+                            <th class="text-center">Year Published</th>
+                            <th class="text-center">ISBN</th>
+                        </tr>
+                    </thead>
+                    <tbody id='libraryTable'></tbody>
+                </table>
+            </div>
+        </main>
+        <script src="/js/config.js"></script>
+        <script src='/js/library.js'></script>
+        <script async>
+            getLibraryData();
+        </script>
+
+    </body>
+</html>

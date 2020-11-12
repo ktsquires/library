@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en' class='wide wow-animation'>
+    <head>
+        <title>
+            Write Library
+        </title>
+
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/css/write-library.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <header class="header">
+            <section class="relative text-center">
+              <div class="container">
+                <div class="text-center">
+                  <h1 class='title'><span class='text-bold'>Enter Book Data Into Library</span></h1>
+                </div>
+              </div>
+            </section>
+          </header>
+          <!-- Page Content-->
+          <div id="router_button" class="btn-group-variant config-buttons">
+            <a href="http://localhost:3000/browse-library" id="write-router" class="btn btn-sm edit_btn">Browse Library</a>
+          </div>
+
+          <main class="page-content">
+            <section id="libraryConfig_section" class="section section-inset-1">
+                <div class="container">
+                    <div class="row">
+                        <form id="config_form">
+                            <div class="form-group">
+                                <label class='form_med' for="bookTitle">Book Title:</label>
+                                <input type="text" id="bookTitle" name="bookTitle" class="form-control form_md form_input" size='30'>
+                            </div>
+                            <div class="form-group">
+                                <label class='form_med' for="author">Author:</label>
+                                <input type="text" id="author" name="author" class="form-control form_md form_input">
+                            </div>
+                            <div class="form-group">
+                                <label class='form_med' for="publisher">Publisher:</label>
+                                <input type="text" id="publisher" name="publisher" class="form-control form_md form_input">
+                            </div>
+                            <div class="form-group">
+                                <label class='form_med' for="yearPublished">Year Published:</label>
+                                <input type="text" id="yearPublished" name="yearPublished" class="form-control form_sm form_input">
+                            </div>
+                            <div class="form-group">
+                                <label class='form_med' for="isbn">ISBN:</label>
+                                <input type="text" id="isbn" name="isbn" class="form-control form_md form_input">
+                            </div>
+                            <div id="save_button" class="btn-group-variant config-buttons">
+                                <button id="data-submit" class="btn btn-sm edit_btn">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="/js/config.js"></script>
+        <script src='/js/library.js'></script>
+        <script>
+            activateSubmitButton();
+        </script>
+    </body>
+</html>

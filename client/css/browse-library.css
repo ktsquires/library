@@ -1,0 +1,127 @@
+
+.header {
+    background-color: #b72025;
+    padding: 20px;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+
+
+.page-content {
+    width: 85%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+table {
+    float: left;
+}
+table, th, td {
+    text-align:left;
+    font-size: 24px;
+    margin: 50px;
+}
+
+
+/* Table */
+.table-responsive > .table > thead > tr > th,
+.table-responsive > .table > thead > tr > td,
+.table-responsive > .table > tbody > tr > th,
+.table-responsive > .table > tbody > tr > td,
+.table-responsive > .table > tfoot > tr > th,
+.table-responsive > .table > tfoot > tr > td {
+    white-space: normal;
+}
+
+table > tr > td {
+    color: #333333;
+}
+
+.btn-sm{
+    background-color: #333333;
+    color: #FFF;
+}
+
+.edit_btn {
+  display: inline-block;
+  margin: 0px;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-color: #333333;
+  color: #FFF;
+  border: 1.5px solid transparent;
+  white-space: nowrap;
+  padding: 15px 10px;
+  font-size: 13px;
+  line-height: .5;
+  border-radius: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+@media screen and (max-width: 1365px) {
+    .page-content {
+        width: 100%;
+    }
+    
+    .container {
+        width: 100%;        
+    }
+    
+    .table-responsive{
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .table > thead > tr > td,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > td {
+      padding: 10px 2px;
+    }
+
+    .table > thead > tr > th,
+    .table > tbody > tr > th,
+    .table > tfoot > tr > th {
+      padding: 12px 4px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-content {
+        width: 100%;
+    }
+    
+    .container {
+        width: 100%;        
+    }
+    
+    .col-xs-11{
+        width: 100%;        
+    }
+    
+    .table-responsive{
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .table > thead > tr > td,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > td {
+      padding: 10px 2px;
+    }
+
+    .table > thead > tr > th,
+    .table > tbody > tr > th,
+    .table > tfoot > tr > th {
+      padding: 12px 4px;
+    }
+}
