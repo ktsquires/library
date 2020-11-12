@@ -7,6 +7,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.resolve(__dirname + "/../client")));
 
+//make the server
+var server;
+var port = process.env.PORT || process.env.NODE_PORT || 3000;
+
 //Page listeners
 var router = require("./router.js");
 router(app);
@@ -16,6 +20,10 @@ router(app);
 var services = require("./services.js");
 services(app);
 
-app.listen(3000);
-
-console.log('server is running...');
+//listen
+server = app.listen(port, function(err) {
+    if (err) {
+      throw err;
+    }
+    console.log("Listening on port " + port);
+});
