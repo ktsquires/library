@@ -25,7 +25,7 @@
         </header>
 
         <div id="router_button" class="btn-group-variant config-buttons">
-            <a href="http://localhost:3000/write-library" id="browse-router" class="btn btn-sm edit_btn">Add Record</a>
+            <button id="browse-router" class="btn btn-sm edit_btn router-button" data-target="/write-library">Add Record</button>
         </div>
 
         <!-- create a table for the library data to be displayed -->
@@ -51,7 +51,7 @@
         </main>
         <script src="/js/config.js"></script>
         <script src='/js/library.js'></script>
-        <script async>
+        <script>
             getLibraryData();
         </script>
 

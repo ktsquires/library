@@ -1,4 +1,10 @@
 
+//Add a listener for the switch page buttons
+$('.router-button').click(function() {
+  var target = libraryURL + this.getAttribute("data-target");
+  location.assign(target);
+});
+
 //Create a listener that waits for user to enter submit button
 function activateSubmitButton() {
 
@@ -15,7 +21,7 @@ function activateSubmitButton() {
       var jsonString = JSON.stringify({ID: ID, bookTitle: bookTitle, author: author, publisher: publisher, yearPublished: yearPublished, isbn:isbn});
       
       $.ajax({
-        url: "http://localhost:3000/write-record",
+        url: libraryURL + "/write-record",
         type:"post",
         data: {data:jsonString},
         success: function(response){
@@ -36,7 +42,7 @@ function activateSubmitButton() {
 //Retrieve the library data and populate on page load
 function getLibraryData() {
   $.ajax({
-    url: "http://localhost:3000/read-records",
+    url: libraryURL + "/read-records",
     type:"get",
     success: function(response){
       console.log(response);
