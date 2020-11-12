@@ -4,8 +4,20 @@ var outputFile = './files/library.txt';
 
 var services = function(app) {
     app.post('/write-record', function(req, res) {
-        var data = req.body.data;
     
+        var d = new Date();
+        var ID = "lib" + d.getTime();
+        
+        var data = {
+            ID: ID,
+            bookTitle: req.body.bookTitle, 
+            author: req.body.author, 
+            publisher: req.body.publisher, 
+            yearPublished: req.body.yearPublished, 
+            isbn: req.body.isbn
+        };
+
+        data = JSON.stringify(data);
 
         console.log(data);
 

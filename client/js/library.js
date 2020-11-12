@@ -15,15 +15,13 @@ function activateSubmitButton() {
       var publisher = $('#publisher').val();
       var yearPublished = $('#yearPublished').val();
       var isbn = $('#isbn').val();
-      var d = new Date();
-      var ID = "lib" + d.getTime();
 
-      var jsonString = JSON.stringify({ID: ID, bookTitle: bookTitle, author: author, publisher: publisher, yearPublished: yearPublished, isbn:isbn});
+      var jsonString = {bookTitle: bookTitle, author: author, publisher: publisher, yearPublished: yearPublished, isbn:isbn};
       
       $.ajax({
         url: libraryURL + "/write-record",
         type:"post",
-        data: {data:jsonString},
+        data: jsonString,
         success: function(response){
           var test1 = "";
           alert(response);
