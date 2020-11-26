@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static(path.resolve(__dirname + "/../client")));
+app.use("/client", express.static(path.resolve(__dirname + "/../client/")));
 
 //make the server
 var server;

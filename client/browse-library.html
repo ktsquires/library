@@ -5,11 +5,20 @@
             Browse Library
         </title>
 
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
-        <link rel="stylesheet" type="text/css" href="/css/browse-library.css">
-
+        <link rel="stylesheet" type="text/css" href="/client/tablesorter/css/theme.blue.css">
+        <link rel="stylesheet" type="text/css" href="/client/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="/client/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/client/css/browse-library.css">
+        <link rel="stylesheet" type="text/css" href="/client/css/menu.css">
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+        <script src="/client/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/client/tablesorter/jquery.tablesorter.min.js"></script>
+        <script type="text/javascript" src="/client/tablesorter/jquery.tablesorter.widgets.min.js"></script>
+        <script src="/client/js/config.js"></script>
+        <script src='/client/js/menu.js'></script>
+        <script src='/client/js/browse-library.js' async></script>
+        <!-- <script src='/client/js/library.js' async></script> -->
     </head>
 
     <body>
@@ -24,36 +33,34 @@
             </section>
         </header>
 
-        <div id="router_button" class="btn-group-variant config-buttons">
-            <button id="browse-router" class="btn btn-sm edit_btn router-button" data-target="/write-library">Add Record</button>
-        </div>
+        <div id="menu-items" class="menu-items"></div>
+        <!-- <div id="router_button" class="btn-group-variant config-buttons">
+            <a href="/client/write-library.html" id="browse-router" class="btn btn-sm edit_btn">Add Record</a>
+        </div> -->
 
         <!-- create a table for the library data to be displayed -->
         <main class="page-content">
             <div class="col-xs-11">
-                <table class="table-striped table">
+                <table id="libraryTableContainer" class="tablesorter">
                     <colgroup>
-                        <col class='col-xs-3'>
+                        <col class=''>
                     </colgroup>
                     <thead>
-                        <tr class='bg-light'>
-                            <th class="text-left">ID</th>
-                            <th class="text-left">Title</th>
-                            <th class="text-left">Author</th>
-                            <th class="text-left">Publisher</th>
-                            <th class="text-center">Year Published</th>
-                            <th class="text-center">ISBN</th>
+                        <tr class='table-headerRow'>
+                            <th >ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Publisher</th>
+                            <th>Year Published</th>
+                            <th>ISBN</th>
+                            <!-- <th class="text-center"></th> -->
                         </tr>
                     </thead>
-                    <tbody id='libraryTable'></tbody>
+                    <tbody id='libraryTable'>
+                        <button class='delete-button' hidden></button>
+                    </tbody>
                 </table>
             </div>
         </main>
-        <script src="/js/config.js"></script>
-        <script src='/js/library.js'></script>
-        <script>
-            getLibraryData();
-        </script>
-
     </body>
 </html>

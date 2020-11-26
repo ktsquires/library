@@ -1,3 +1,9 @@
+body {
+    background-image: url("/client/images/bookshelf3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .header {
     background-color: #b72025;
     padding: 20px;
@@ -6,6 +12,10 @@
 .title {
     font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
+}
+
+.libraryForm {
+    background-color: white;
 }
 
 .form-group > label {
@@ -17,7 +27,7 @@
 }
 
 .page-content {
-    width: 75%;
+    width: 100%;
     margin: auto;
     margin-top: 30px;
 }
@@ -25,6 +35,8 @@
 #libraryConfig_section .container {
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-left: 33em;
+    width: 40%;
 }
 
 /* Form */
@@ -62,7 +74,8 @@
 .form_med {
     float: left;
     clear: left;
-    width: 20%;
+    width: 30%;
+    margin-left: 2%;
     margin-right: 2%;
     text-align: right;
 }
@@ -70,13 +83,13 @@
 .form_md {
     float: left;
     clear: right;
-    width: 20%;
+    width: 40%;
 }
 
 .form_sm {
     float: left;
     clear: right;
-    width: 10%;
+    width: 20%;
 }
 
 /* buttons */
@@ -84,10 +97,15 @@
     width: 35%;
     clear: left;
     float: left;
+    margin-left: 20em;
 }
 
 #config-save {
     float: right;
+}
+
+.form-group {
+    /* margin-left: 15%; */
 }
 
 .container .paytable-buttons,

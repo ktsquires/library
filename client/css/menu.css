@@ -1,0 +1,26 @@
+
+.menu-items {
+    width: 100%;
+    font-size: 28px;
+    padding-left: 20em;
+    margin-top: 0em;
+    float: left;
+    clear: right;
+    background-color: white;
+}
+
+.router-link-container {
+    float: left;
+    margin-left: 50px;
+}
+
+.router-link{
+    float: left;
+    color: blue;
+}
+
+.page-selected{
+    float: left;
+    color: black
+}
+

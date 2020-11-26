@@ -1,0 +1,36 @@
+body {
+    background-image: url("/client/images/bookshelf4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.header {
+    background-color: #b72025;
+    padding: 20px;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+
+
+.page-content {
+    float:left;
+    width: 65%;
+    font-size: 45px;
+    background-color: white;
+    color: #b72025;
+    margin-left: 15%;
+    margin-top: 2em;
+}
+
+.content{
+    margin: auto;
+    /* margin-left: 10em; */
+}
+
+.contentIntro {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
